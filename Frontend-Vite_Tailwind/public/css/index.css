@@ -1,0 +1,10 @@
+@font-face{
+    font-family: "NotoSansThai-Regular";
+    src:local("NotoSansThai-Regular"),
+    url('../../src/assets/fonts/NotoSansThai-Regular.ttf') 
+  }
+  @font-face{
+    font-family: "GSB";
+    src:local("GSB"),
+    url('../../src/assets/fonts/GSB.ttf') 
+  }  

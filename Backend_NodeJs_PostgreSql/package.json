@@ -1,0 +1,23 @@
+{
+  "name": "spgv-cain_api",
+  "version": "0.0.0",
+  "description": "SPGV-CAIN_API",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "connect-timeout": "^1.9.0",
+    "cors": "^2.8.5",
+    "easy-soap-request": "^5.0.0",
+    "express": "^4.18.1",
+    "express-useragent": "^1.0.15",
+    "https": "^1.0.0",
+    "morgan": "^1.10.0",
+    "mssql": "^9.0.1",
+    "uuid": "^9.0.0",
+    "xml2js": "^0.4.23"
+  }
+}
