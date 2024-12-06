@@ -1,0 +1,66 @@
+@startuml
+!define TEXT text
+
+entity "General Information" as General {
+    + System Name : TEXT
+    + Develop Type : Dropdown (outsource, in house)
+    + Contract NO. : TEXT
+    + Vendor / Contact NO. : TEXT
+    + Business Unit : TEXT
+    + Develop Unit : Dropdown
+}
+
+entity "Environment Information" as Environment {
+    + Environment : Dropdown (DEV, SIT, UAT, PreProd, Prod)
+    + Server Name / Host Name : TEXT
+    + IP : TEXT
+    + Server Type : Dropdown (Physics, Network Device, etc.)
+    + Server Role : Dropdown (Database Server, Application Server, etc.)
+    + Server Duty : Dropdown (Web Frontend, Service Web Backend, etc.)
+    + Database : TEXT
+    + Application : TEXT
+    + Operating System : TEXT
+    + Service Pack : TEXT
+    + Build : TEXT
+    + CPU : TEXT
+    + RAM : TEXT
+    + DISK : TEXT
+    + DR : TEXT
+    + Join Domain : TEXT
+    + Windows Cluster : TEXT
+    + Production Unit : Dropdown
+}
+
+entity "Connectivity Information" as Connectivity {
+    + AD : Dropdown (YES, NO)
+    + ADFS : Dropdown (YES, NO)
+    + DNS : Dropdown (YES, NO)
+    + NTP : Dropdown (YES, NO)
+    + TPAM : Dropdown (YES, NO)
+    + Netka : Dropdown (YES, NO)
+    + FIM : Dropdown (YES, NO)
+    + FTP Server : Dropdown (YES, NO)
+    + FTP GoAnywhere MFT Server : Dropdown (YES, NO)
+    + Email (SMTP) : Dropdown (YES, NO)
+    + SMS : Dropdown (YES, NO)
+    + API Management : Dropdown (YES, NO)
+    + DV : Dropdown (YES, NO)
+    + SNMP : Dropdown (YES, NO)
+}
+
+entity "Security & Other Information" as Security {
+    + URL Web Site : TEXT
+    + Certificate Expire Date : TEXT
+    + Backup Policy : TEXT
+    + Downtime Allowed : TEXT
+    + Centralize Log : Dropdown (YES, NO)
+    + Setup Agent Patch : Dropdown (YES, NO)
+    + Internet Facing : Dropdown (YES, NO)
+}
+
+' Relationships
+General ||--o{ Environment : "has"
+Environment ||--o{ Connectivity : "connected via"
+General ||--o{ Security : "associated with"
+
+@enduml
